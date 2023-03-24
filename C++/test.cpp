@@ -1,20 +1,9 @@
+// CH3-1.cpp
 #include <iostream>
-#include <iomanip>
+#include <iomanip> //for setprecision and setw
 using namespace std;
-
-int main()
+int main(int)
 {
-    double f = 456.789;
-    cout << fixed << setprecision(4);
-    cout << "|" << setw(3) << f << "|" << endl;
-    cout << "|" << setw(8) << f << "|" << endl;
-    cout << setfill('*');
-    cout << "|" << setw(8) << f << "|" << endl;
-    cout << left;
-    cout << "|" << setw(8) << f << "|" << endl;
-    cout << setfill(' ');
-    cout << resetiosflags(ios::left);
-    cout << "|" << setw(8) << f << "|" << endl;
-
+    printf("%s", "\x49\x4C\x4F\x56\x55\x00\n");
     return 0;
-}
+};
