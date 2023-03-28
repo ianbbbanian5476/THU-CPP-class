@@ -1,9 +1,29 @@
-// CH3-1.cpp
 #include <iostream>
-#include <iomanip> //for setprecision and setw
+#include <sstream>
+#include <string>
+#include <vector>
+
 using namespace std;
-int main(int)
+
+int main()
 {
-    printf("%s", "\x49\x4C\x4F\x56\x55\x00\n");
+    string txt = "hello world";
+    vector<string> words;
+    stringstream ss(txt);
+    string word;
+
+    // Extract words from the stringstream
+    while (ss >> word)
+    {
+        cout << word << endl;
+        words.push_back(word);
+    }
+
+    // Print the words
+    for (string w : words)
+    {
+        cout << w << endl;
+    }
+
     return 0;
-};
+}

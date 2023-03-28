@@ -10,7 +10,7 @@ int main()
     {
     case 4:
         cout << "excellent student" << endl;
-        // break;
+        break;
 
     case 3:
         cout << "good student" << endl;
