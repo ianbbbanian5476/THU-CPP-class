@@ -5,7 +5,7 @@ int main()
 {
     int temp;
     cin >> temp;
-    cout << (temp * 9 / 5) + 32 << endl;
+    cout << (9.0 / 5) * temp + 32 << endl;
 
     return 0;
 }
