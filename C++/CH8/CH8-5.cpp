@@ -13,18 +13,18 @@ int main()
     while (index < 6)
     {
         int num = rand() % 49 + 1;
-        bool duplicate = false;
+        bool check = false;
 
         for (int i = 0; i < index; i++)
         {
             if (num == lotto[i])
             {
-                duplicate = true;
+                check = true;
                 break;
             }
         }
 
-        if (!duplicate)
+        if (!check)
         {
             lotto[index] = num;
             index++;
