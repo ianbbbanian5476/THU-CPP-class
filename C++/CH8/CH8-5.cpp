@@ -5,18 +5,16 @@ using namespace std;
 
 int main()
 {
-    srand(time(NULL)); // 設定亂數種子為目前的時間
+    srand(time(NULL));
 
-    int lotto[6] = {0}; // 6個大樂透號碼，初始化為0
-    int index = 0;      // 目前已經產生的號碼數量
+    int lotto[6] = {0};
+    int index = 0;
 
-    // 產生不重複的號碼，重複則重新產生
     while (index < 6)
     {
-        int num = rand() % 49 + 1; // 產生1~49的亂數
-        bool duplicate = false;    // 是否重複標記，初始值為false
+        int num = rand() % 49 + 1;
+        bool duplicate = false;
 
-        // 檢查產生的號碼是否已經在lotto中出現過
         for (int i = 0; i < index; i++)
         {
             if (num == lotto[i])
@@ -26,7 +24,6 @@ int main()
             }
         }
 
-        // 如果沒有重複，則將號碼存入lotto中
         if (!duplicate)
         {
             lotto[index] = num;
@@ -34,7 +31,21 @@ int main()
         }
     }
 
-    // 顯示產生的6個大樂透號碼
+    int n = sizeof(lotto) / sizeof(lotto[0]);
+
+    for (int i = 0; i < n - 1; i++)
+    {
+        for (int j = 0; j < n - i - 1; j++)
+        {
+            if (lotto[j] > lotto[j + 1])
+            {
+                int temp = lotto[j];
+                lotto[j] = lotto[j + 1];
+                lotto[j + 1] = temp;
+            }
+        }
+    }
+
     cout << "大樂透號碼為：";
     for (int i = 0; i < 6; i++)
     {
