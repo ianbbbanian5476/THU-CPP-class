@@ -46,7 +46,7 @@ int main()
         }
     }
 
-    cout << "大樂透號碼為：";
+    cout << "大樂透：";
     for (int i = 0; i < 6; i++)
     {
         cout << lotto[i] << " ";
