@@ -3,13 +3,13 @@
 #include <algorithm>
 using namespace std;
 
-bool isPalindrome(string str)
+string reverse(string str)
 {
 
     string reverse_str = str;
     reverse(reverse_str.begin(), reverse_str.end());
 
-    return str == reverse_str;
+    return reverse_str;
 }
 
 int main()
@@ -21,16 +21,8 @@ int main()
         {
             return 0;
         }
-        bool result = isPalindrome(str);
-
-        if (result)
-        {
-            cout << "YES" << endl;
-        }
-        else
-        {
-            cout << "NO" << endl;
-        }
+        string result = reverse(str);
+        cout << result << endl;
     }
 
     return 0;
