@@ -25,11 +25,11 @@ int main()
 
             if (letter[i] != 0)
             {
-                // for (int j = 0; j < letter[i]; j++)
-                //{
-                tmp = 97 + i;
-                cout << tmp;
-                //}
+                for (int j = 0; j < letter[i]; j++)
+                {
+                    tmp = 97 + i;
+                    cout << tmp;
+                }
             }
         }
         cout << endl;
