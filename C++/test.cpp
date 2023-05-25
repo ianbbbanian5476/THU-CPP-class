@@ -2,7 +2,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
-
+template <typename T>
+int smaller(int a, int b);
 using namespace std;
 
 vector<string> split_string(const string &str, const string &delimiter)
@@ -20,11 +21,16 @@ vector<string> split_string(const string &str, const string &delimiter)
     return substrings;
 }
 
+int smaller(int a, int b)
+{
+    return a < b ? a : b;
+}
+
 int main()
 {
-    string txt = "hello world";
-    string delimiter = " ";
-    cout << split_string(txt, delimiter) << endl;
-
-    return 0;
+    string str1 = "Honda CR-V";
+    string str2 = "Toyota RAV4";
+    string st = smaller(str1, str2);
+    cout << "smaller of (" << str1 << ", " << str2 << ") is "
+         << st << endl;
 }
