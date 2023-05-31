@@ -48,11 +48,11 @@ int main()
 
         if (result1 && result2 && result3)
         {
-            cout << "YES" << endl;
+            cout << "有效密碼" << endl;
         }
         else
         {
-            cout << "NO" << endl;
+            cout << "無效密碼" << endl;
         }
     }
 

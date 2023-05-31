@@ -2,8 +2,8 @@
 #include <sstream>
 #include <string>
 #include <vector>
-template <typename T>
-int smaller(int a, int b);
+//template <typename T>
+//int smaller(int a, int b);
 using namespace std;
 
 vector<string> split_string(const string &str, const string &delimiter)
